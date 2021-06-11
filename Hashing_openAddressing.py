@@ -1,5 +1,5 @@
 class Dictionary:
-    def __init__(self, self):
+    def __init__(self, size):
         self.M = size
         self.keyList = [None]*size
         self.valueList = [None]*size
@@ -16,7 +16,7 @@ class Dictionary:
             if self.keyList[i] == key:
                 self.valueList[i] = value
 
-            i = (i+1)+%self.M
+            i = (i+1)%self.M
             if i == initialPos:
                 return
     def get_LinearProbing(self,key):
